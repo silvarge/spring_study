@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="hello.core.CoreApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-03T14:34:04" hostname="DESKTOP-MEQKU5A" time="0.526">
+<testsuite name="hello.core.CoreApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-05-13T06:33:15" hostname="DESKTOP-MEQKU5A" time="0.439">
   <properties/>
-  <testcase name="contextLoads()" classname="hello.core.CoreApplicationTests" time="0.526"/>
-  <system-out><![CDATA[23:34:03.584 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [hello.core.CoreApplicationTests]: CoreApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-23:34:03.673 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration hello.core.CoreApplication for test class hello.core.CoreApplicationTests
+  <testcase name="contextLoads()" classname="hello.core.CoreApplicationTests" time="0.439"/>
+  <system-out><![CDATA[15:33:15.300 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [hello.core.CoreApplicationTests]: CoreApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:33:15.375 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration hello.core.CoreApplication for test class hello.core.CoreApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,9 +14,9 @@
 
  :: Spring Boot ::                (v3.4.3)
 
-2025-03-03T23:34:03.967+09:00  INFO 35236 --- [core] [    Test worker] hello.core.CoreApplicationTests          : Starting CoreApplicationTests using Java 17.0.12 with PID 35236 (started by sh163 in C:\Users\sh163\Desktop\github\spring_study\core)
-2025-03-03T23:34:03.968+09:00  INFO 35236 --- [core] [    Test worker] hello.core.CoreApplicationTests          : No active profile set, falling back to 1 default profile: "default"
-2025-03-03T23:34:04.283+09:00  INFO 35236 --- [core] [    Test worker] hello.core.CoreApplicationTests          : Started CoreApplicationTests in 0.488 seconds (process running for 1.349)
+2025-05-13T15:33:15.645+09:00  INFO 16424 --- [core] [    Test worker] hello.core.CoreApplicationTests          : Starting CoreApplicationTests using Java 17.0.12 with PID 16424 (started by sh163 in C:\Users\sh163\Desktop\github\spring_study\core)
+2025-05-13T15:33:15.646+09:00  INFO 16424 --- [core] [    Test worker] hello.core.CoreApplicationTests          : No active profile set, falling back to 1 default profile: "default"
+2025-05-13T15:33:15.953+09:00  INFO 16424 --- [core] [    Test worker] hello.core.CoreApplicationTests          : Started CoreApplicationTests in 0.457 seconds (process running for 1.222)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
