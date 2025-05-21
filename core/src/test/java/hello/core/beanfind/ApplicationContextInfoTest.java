@@ -1,9 +1,6 @@
 package hello.core.beanfind;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import hello.core.AppConfig;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -18,7 +15,7 @@ public class ApplicationContextInfoTest {
   void findAllBean() {
     // given
     String[] beanDefinitionNames = ac.getBeanDefinitionNames();
-    for (String beanDefinitionName: beanDefinitionNames) {
+    for (String beanDefinitionName : beanDefinitionNames) {
       Object bean = ac.getBean(beanDefinitionName);
       System.out.println("name = " + beanDefinitionName + " Object = " + bean);
     }
@@ -29,9 +26,9 @@ public class ApplicationContextInfoTest {
   void findApplicationBean() {
     // given
     String[] beanDefinitionNames = ac.getBeanDefinitionNames();
-    for (String beanDefinitionName: beanDefinitionNames) {
+    for (String beanDefinitionName : beanDefinitionNames) {
       BeanDefinition beanDefinition = ac.getBeanDefinition(beanDefinitionName);
-      if(beanDefinition.getRole() == BeanDefinition.ROLE_APPLICATION) {
+      if (beanDefinition.getRole() == BeanDefinition.ROLE_APPLICATION) {
         // 애플리케이션 개발을 위해 등록한 빈 출력
         Object bean = ac.getBean(beanDefinitionName);
         System.out.println("name = " + beanDefinitionName + " Object = " + bean);

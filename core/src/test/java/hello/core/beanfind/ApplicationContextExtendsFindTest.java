@@ -6,11 +6,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import hello.core.discount.DiscountPolicy;
 import hello.core.discount.FixDiscountPolicy;
 import hello.core.discount.RateDiscountPolicy;
-import hello.core.member.MemberRepository;
-import hello.core.member.MemoryMemberRepository;
-import java.awt.print.Pageable;
 import java.util.Map;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
@@ -38,40 +34,41 @@ public class ApplicationContextExtendsFindTest {
 
   @Test
   @DisplayName("특정 하위 타입으로 조회 - 좋은 방법은 아님")
-  void findBeanBySubType(){
+  void findBeanBySubType() {
     RateDiscountPolicy rateDiscountPolicy = ac.getBean(RateDiscountPolicy.class);
     assertThat(rateDiscountPolicy).isInstanceOf(RateDiscountPolicy.class);
   }
 
   @Test
   @DisplayName("부모 타입으로 모두 조회하기")
-  void findAllBeansByParentType(){
+  void findAllBeansByParentType() {
     Map<String, DiscountPolicy> beansOfType = ac.getBeansOfType(DiscountPolicy.class);
     assertThat(beansOfType.size()).isEqualTo(2);
 
-    for (String key: beansOfType.keySet()){
+    for (String key : beansOfType.keySet()) {
       System.out.println("Key = " + key + " Value = " + beansOfType.get(key));
     }
   }
 
   @Test
   @DisplayName("부모 타입으로 모두 조회하기")
-  void findAllBeansByObjectType(){
+  void findAllBeansByObjectType() {
     Map<String, Object> beansOfType = ac.getBeansOfType(Object.class);
-    for (String key: beansOfType.keySet()){
+    for (String key : beansOfType.keySet()) {
       System.out.println("Key = " + key + " Value = " + beansOfType.get(key));
     }
   }
 
   @Configuration
   static class TestConfig {
+
     @Bean
-    public DiscountPolicy rateDiscountPolicy(){
+    public DiscountPolicy rateDiscountPolicy() {
       return new RateDiscountPolicy();
     }
 
     @Bean
-    public DiscountPolicy fixDiscountPolicy(){
+    public DiscountPolicy fixDiscountPolicy() {
       return new FixDiscountPolicy();
     }
   }

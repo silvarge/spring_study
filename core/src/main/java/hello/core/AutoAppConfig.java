@@ -9,12 +9,12 @@ import org.springframework.context.annotation.FilterType;
 
 @Configuration
 @ComponentScan(
-//    basePackages = "hello.core.member",  // 베이스 패키지 지정
+    basePackages = "hello.core",  // 베이스 패키지 지정
     excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Configuration.class)
 )
 public class AutoAppConfig {
 
-  @Bean(name = "memoryMemberRepository")
+  @Bean
   MemberRepository MemoryMemberRepository() {
     return new MemoryMemberRepository();
   }

@@ -39,7 +39,7 @@ public class ConfigurationSingletonTest {
         AppConfig.class);
     AppConfig bean = ac.getBean(AppConfig.class);
 
-    System.out.println("bean = " + bean.getClass());
+    System.out.println("bean = " + bean);
 
   }
 

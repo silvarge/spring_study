@@ -4,13 +4,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import hello.core.member.MemberService;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.json.JsonWriter.Members;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class XmlAppContext {
 
   @Test
-  void xmlAppContext(){
+  void xmlAppContext() {
     GenericXmlApplicationContext ac = new GenericXmlApplicationContext(
         "appConfig.xml");
     MemberService memberService = ac.getBean("memberService", MemberService.class);
